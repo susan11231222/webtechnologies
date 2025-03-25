@@ -1,0 +1,55 @@
+body{
+background-image: url("hotel.jpeg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+
+background-attachment: scroll;
+
+}
+/* This is a class selector */
+.head {
+
+border:5px,black solid;
+text-align: center;
+text-shadow:2px 2px yellow ;
+color:blue;
+width:100%;
+position: fixed;
+text-transform: uppercase;
+outline:lightblue 5px solid;
+outline-offset: 5px;
+border-radius:10px ;
+margin-top:0px;
+font-size:70px;
+top:0;
+
+
+}/* This is a single element selector*/
+h3{
+margin-top: 110px;
+font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+text-align: center;
+text-transform: capitalize;
+font-size: 50px;
+font-style: normal;
+word-spacing:2px ;
+color:blue;
+text-decoration: underline;
+
+}
+/* This is an ID selector*/
+#about{
+    font-size: large;
+word-spacing:2px;
+font-family: 'Times New Roman', Times, serif;
+font-style: normal;
+text-transform: capitalize;
+color:yellow;
+
+
+
+
+
+}
