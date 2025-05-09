@@ -1,0 +1,21 @@
+
+* Container to align sections side by side */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+/* Section style */
+.section, .section2 {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+/* Ensure the product images are displayed correctly */
+.product {
+  margin: 10px 0;
+  text-align}
