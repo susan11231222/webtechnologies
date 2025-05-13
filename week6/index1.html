@@ -1,0 +1,168 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Interactive Bundle of Joy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f9ff;
+    }
+
+    button, input {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    #magicBtn {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    #hoverBox {
+      width: 150px;
+      height: 50px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 50px;
+      margin-top: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    #slideshow {
+      width: 200px;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+
+    .tab {
+      background-color: #e0e0e0;
+      padding: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .content {
+      display: none;
+      padding: 10px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #feedback {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Interactive Bundle of Joy</h1>
+
+  <!-- 🎈 Event Handling -->
+  <h2>1. Event Handling</h2>
+  <button id="magicBtn">Click Me!</button>
+  <div id="hoverBox">Hover over me!</div>
+  <input type="text" id="keyInput" placeholder="Type something..." />
+  <p id="secretAction">🤐 Secret: Double-click me!</p>
+
+  <!-- 🎮 Interactive Elements -->
+  <h2>2. Interactive Elements</h2>
+  <img id="slideshow" src="https://via.placeholder.com/200x100?text=Slide+1" />
+  
+  <div class="tab" onclick="toggleTab('tab1')">Tab 1</div>
+  <div id="tab1" class="content">This is Tab 1 content!</div>
+
+  <div class="tab" onclick="toggleTab('tab2')">Tab 2</div>
+  <div id="tab2" class="content">This is Tab 2 content!</div>
+
+  <!-- 📋✅ Form Validation -->
+  <h2>3. Form Validation</h2>
+  <form id="signupForm">
+    <input type="email" id="email" placeholder="Enter email" required /><br>
+    <input type="password" id="password" placeholder="Password (min 8 chars)" required minlength="8" /><br>
+    <button type="submit">Sign Up</button>
+    <p id="feedback"></p>
+  </form>
+
+  <script>
+    // Event Handling
+    document.getElementById('magicBtn').addEventListener('click', () => {
+      alert('You clicked the magic button!');
+      magicBtn.textContent = 'Clicked!';
+      magicBtn.style.background = 'purple';
+    });
+
+    document.getElementById('hoverBox').addEventListener('mouseover', () => {
+      hoverBox.style.backgroundColor = 'gold';
+    });
+
+    document.getElementById('keyInput').addEventListener('keypress', (e) => {
+      console.log(`Key pressed: ${e.key}`);
+    });
+
+    document.getElementById('secretAction').addEventListener('dblclick', () => {
+      alert('🎉 You discovered the secret double-click action!');
+    });
+
+    // Slideshow
+    const images = [
+      'https://via.placeholder.com/200x100?text=Slide+1',
+      'https://via.placeholder.com/200x100?text=Slide+2',
+      'https://via.placeholder.com/200x100?text=Slide+3'
+    ];
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      document.getElementById('slideshow').src = images[index];
+    }, 2000);
+
+    // Tab Toggle
+    function toggleTab(id) {
+      const content = document.getElementById(id);
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Form Validation
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+      const email = document.getElementById('email');
+      const password = document.getElementById('password');
+      const feedback = document.getElementById('feedback');
+
+      if (!email.checkValidity()) {
+        e.preventDefault();
+        feedback.textContent = 'Please enter a valid email.';
+      } else if (password.value.length < 8) {
+        e.preventDefault();
+        feedback.textContent = 'Password must be at least 8 characters.';
+      } else {
+        feedback.textContent = '✅ Form is valid!';
+      }
+    });
+
+    // Real-time password feedback
+    document.getElementById('password').addEventListener('input', function() {
+      const feedback = document.getElementById('feedback');
+      if (this.value.length < 8) {
+        feedback.textContent = 'Too short!';
+      } else {
+        feedback.textContent = 'Looking good!';
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
