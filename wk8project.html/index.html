@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poultry Farm</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Poultry Farm</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Why Keep Poultry?</h2>
+        <p>Poultry farming is a profitable and sustainable business that provides a steady income while ensuring a reliable source of nutrition. Whether for eggs, meat, or breeding, poultry farming can be started with minimal capital and scaled up over time.</p>
+        <h3><u>Benefits of Poultry Farming:</u></h3>
+        <ul>
+            <li>High demand for eggs and chicken meat</li>
+            <li>Low startup costs and fast returns</li>
+            <li>Easy to maintain and manage</li>
+            <li>Contributes to food security</li>
+        </ul>
+     <p>Get to learn more benefits of poultry products  <a href="https://www.poultrytech.org/blog/the-critical-role-of-poultry-in-human-nutrition/?utm_source=chatgpt.com">here</a></p>
+        <p>Start your poultry farming journey today and enjoy the benefits!</p>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-category">
+            <h3>Eggs</h3>
+            <p>Fresh organic and fertilized eggs available.</p>
+            <h3><a href="eggs.html"><u>lean more</u></a></h3>
+        </div>
+        <div class="product-category">
+            <h3>chicks</h3>
+            <p>Healthy day-old and week-old chicks.</p>
+            <a href="chicks.html"><u>learn more</u></a>
+        </div>
+        <div class="product-category">
+            <h3>Chickens</h3>
+            <p>Broilers, layers, and indigenous breeds available.</p>
+            <a href="chickens.html"><u>learn more</u></a>
+        </div>
+    </section>
+
+   
+    
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have any questions? Fill out the form below:</p>
+        <form id="contactForm" action="order.php" method="post">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p id="responseMessage"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Poultry Farm. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

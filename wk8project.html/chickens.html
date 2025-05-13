@@ -1,0 +1,53 @@
+<!-- chickens.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chickens - Poultry Farm</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Farm Fresh Chickens</h1>
+        <nav><a href="index.html">&larr; Back to Home</a></nav>
+    </header>
+
+    <section class="product-container">
+        <div class="product">
+            <img width="400px" height="400px" src="chicken1.jpg" alt="Healthy Chickens">
+            <h2>Free-Range Chickens</h2>
+            <p>Healthy, well-fed, and naturally raised chickens, perfect for your home or farm! 🐓✨</p>
+            <p><strong>Price:</strong> $10 per chicken</p>
+            <img src="chicken2.jpeg" alt="There is a photo of chickens here">
+        </div>
+    </section>
+
+    <section class="order-section">
+        <h2>Order Chickens</h2>
+        <p>Fill in your details below to place an order.</p>
+        <form id="order-form" action="order.php" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="quantity">Quantity (Chickens):</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <button type="submit">Place Order</button>
+        </form>
+        <p id="order-response" style="color: green; display: none;">Order placed successfully! We will contact you soon. 🐓🚚</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Poultry Farm. All Rights Reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
